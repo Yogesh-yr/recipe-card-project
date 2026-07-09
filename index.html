@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classic Chocolate Fudge Cake — Recipe Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="frame">
+<div class="card" id="card">
+
+  <!-- corner flourishes: original decorative SVG ornaments -->
+  <svg class="corner corner-tl" viewBox="0 0 90 90" aria-hidden="true">
+    <path d="M4 4 Q40 4 40 40" stroke="currentColor" stroke-width="2" fill="none"/>
+    <path d="M4 4 Q4 40 40 40" stroke="currentColor" stroke-width="2" fill="none"/>
+    <circle cx="4" cy="4" r="3" fill="currentColor"/>
+    <path d="M14 14 Q30 14 30 30" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.6"/>
+  </svg>
+  <svg class="corner corner-tr" viewBox="0 0 90 90" aria-hidden="true">
+    <path d="M86 4 Q50 4 50 40" stroke="currentColor" stroke-width="2" fill="none"/>
+    <path d="M86 4 Q86 40 50 40" stroke="currentColor" stroke-width="2" fill="none"/>
+    <circle cx="86" cy="4" r="3" fill="currentColor"/>
+    <path d="M76 14 Q60 14 60 30" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.6"/>
+  </svg>
+  <svg class="corner corner-bl" viewBox="0 0 90 90" aria-hidden="true">
+    <path d="M4 86 Q40 86 40 50" stroke="currentColor" stroke-width="2" fill="none"/>
+    <path d="M4 86 Q4 50 40 50" stroke="currentColor" stroke-width="2" fill="none"/>
+    <circle cx="4" cy="86" r="3" fill="currentColor"/>
+  </svg>
+  <svg class="corner corner-br" viewBox="0 0 90 90" aria-hidden="true">
+    <path d="M86 86 Q50 86 50 50" stroke="currentColor" stroke-width="2" fill="none"/>
+    <path d="M86 86 Q86 50 50 50" stroke="currentColor" stroke-width="2" fill="none"/>
+    <circle cx="86" cy="86" r="3" fill="currentColor"/>
+  </svg>
+
+  <!-- Header -->
+  <header class="header">
+    <p class="eyebrow">Vault of Codes &nbsp;&middot;&nbsp; Est. Baking Series</p>
+    <h1 class="title">Classic Chocolate<br><span>Fudge Cake</span></h1>
+    <div class="ornament" aria-hidden="true">
+      <span class="ornament-line"></span>
+      <span class="ornament-mark">&#10086;</span>
+      <span class="ornament-line"></span>
+    </div>
+    <p class="subtitle">A rich, old-fashioned fudge cake finished with cream and strawberries — from bowl to table in half an hour.</p>
+
+    <div class="meta-row">
+      <div class="meta-pill">
+        <span class="meta-label">Total Time</span>
+        <span class="meta-value" id="prepTimeDisplay">30 min</span>
+      </div>
+      <div class="meta-pill">
+        <span class="meta-label">Serves</span>
+        <span class="meta-value">8</span>
+      </div>
+      <div class="meta-pill">
+        <span class="meta-label">Difficulty</span>
+        <span class="meta-value">Easy</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero photograph -->
+  <div class="hero">
+    <div class="hero-frame">
+      <img
+        src="assets/cake-photo.jpg"
+        alt="Classic chocolate fudge cake topped with whipped cream, strawberries, and chocolate curls"
+        class="hero-photo"
+        loading="lazy">
+      <span class="hero-badge">30 MIN</span>
+    </div>
+  </div>
+
+  <!-- Layer progress: signature element -->
+  <div class="layer-progress" id="layerProgress" aria-label="Cooking progress shown as cake layers">
+    <p class="layer-progress-label">Build progress <span id="progressStepText">0 / 6 steps</span></p>
+    <div class="layers">
+      <div class="layer" data-layer="1"></div>
+      <div class="layer" data-layer="2"></div>
+      <div class="layer" data-layer="3"></div>
+      <div class="layer" data-layer="4"></div>
+      <div class="layer" data-layer="5"></div>
+      <div class="layer" data-layer="6"></div>
+    </div>
+  </div>
+
+  <div class="body-grid">
+
+    <!-- Ingredients -->
+    <section class="panel ingredients-panel">
+      <div class="panel-head">
+        <h2>Ingredients</h2>
+        <button class="btn btn-ghost" id="toggleIngredients" aria-expanded="false" aria-controls="ingredientsList">
+          <span id="toggleIngredientsLabel">Show ingredients</span>
+          <svg class="chevron" width="14" height="14" viewBox="0 0 14 14"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <ul class="ingredients-list" id="ingredientsList">
+        <li><span class="qty">200 g</span> dark chocolate, chopped</li>
+        <li><span class="qty">180 g</span> unsalted butter</li>
+        <li><span class="qty">150 g</span> caster sugar</li>
+        <li><span class="qty">4</span> large eggs</li>
+        <li><span class="qty">70 g</span> plain flour</li>
+        <li><span class="qty">1 tsp</span> vanilla extract</li>
+        <li><span class="qty">1 pinch</span> sea salt</li>
+        <li><span class="qty">100 g</span> strawberries and whipped cream, to finish</li>
+      </ul>
+    </section>
+
+    <!-- Steps -->
+    <section class="panel steps-panel">
+      <div class="panel-head">
+        <h2>Method</h2>
+        <button class="btn btn-ghost" id="toggleSteps" aria-expanded="false" aria-controls="stepsList">
+          <span id="toggleStepsLabel">Show steps</span>
+          <svg class="chevron" width="14" height="14" viewBox="0 0 14 14"><path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <ol class="steps-list" id="stepsList">
+        <li data-step="1"><span class="step-num">01</span><span class="step-text">Melt the chocolate and butter together in a heatproof bowl over simmering water, about 3 minutes.</span></li>
+        <li data-step="2"><span class="step-num">02</span><span class="step-text">Whisk the sugar and eggs until pale and light, about 3 minutes.</span></li>
+        <li data-step="3"><span class="step-num">03</span><span class="step-text">Fold the melted chocolate into the egg mixture in three additions.</span></li>
+        <li data-step="4"><span class="step-num">04</span><span class="step-text">Sift in the flour and salt, folding gently until just combined.</span></li>
+        <li data-step="5"><span class="step-num">05</span><span class="step-text">Pour into a greased tin and bake at 190°C for 16–18 minutes.</span></li>
+        <li data-step="6"><span class="step-num">06</span><span class="step-text">Rest for 5 minutes, then top with strawberries and cream before serving.</span></li>
+      </ol>
+    </section>
+
+  </div>
+
+  <!-- Cooking controls -->
+  <div class="controls no-print">
+    <button class="btn btn-primary" id="startCookingBtn">Start cooking</button>
+    <button class="btn btn-secondary" id="nextStepBtn" disabled>Next step</button>
+    <button class="btn btn-ghost-outline" id="resetBtn">Reset</button>
+    <button class="btn btn-ghost-outline" id="printBtn">Print recipe</button>
+  </div>
+
+  <!-- Timer -->
+  <div class="timer-box no-print" id="timerBox" hidden>
+    <p class="timer-label">Time remaining</p>
+    <p class="timer-value" id="timerValue">30:00</p>
+
+    <div class="timer-track"><div class="timer-fill" id="timerFill"></div></div>
+  </div>
+
+  <p class="live-region" id="liveMessage" aria-live="polite"></p>
+
+  <footer class="card-footer">
+    <span class="ornament-mark small">&#10086;</span>
+    <span>Recipe card &middot; Vault of Codes</span>
+    <span class="ornament-mark small">&#10086;</span>
+  </footer>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
